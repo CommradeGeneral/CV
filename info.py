@@ -8,7 +8,7 @@ personal_info = {
     "Address"       : "Mit Ghamr - Dakahliyya",
     "Email"         : ["m.hashim.666666@gmail.com"],
     "LinkedIn"      : ["linkedin.com/in/muhammad-hashim-04ab56197/"],
-    #"Github"        : ["Kill my Github"],
+    "Github"        : ["https://github.com/CommradeGeneral"],
     "Full name"     : "Muhammad AbdelMottalib Ibrahim AbdelMottalib Hashin",
     "DoE"           : "22/8/1994",
     "Nationality"   : "Egyptian",

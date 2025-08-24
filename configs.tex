@@ -1,0 +1,336 @@
+\makeatletter
+\newtcolorbox{titlebox}[1][]{breakable,interior hidden,#1,left=2pt,right=2pt,enhanced, coltitle=black,
+attach boxed title to top right={yshift*=-\tcboxedtitleheight/2,xshift={-\kvtcb@width/10}},before skip=1.5em,after skip=1.5em,arc=2mm,
+%frame hidden,
+boxed title style={empty},varwidth boxed title=0.7\kvtcb@width,
+frame code={%
+			\draw [,line width=0.4mm] (title.west){[rounded corners=\kvtcb@arc] -| (frame.south west) -- (frame.south east)} |- (title.east) {[rounded corners=\kvtcb@arc] -- (title.south east) -- (title.south west)} -- cycle;
+					},}
+%skin first is subskin of ={myskini}{segmentation style={solid,line width=0.4mm}},
+%----------
+%skin last is subskin of ={myskiniii}{segmentation style={solid,line width=0.4mm}},
+%\newcommand{\logo}[1][\large\faGraduationCap]{}
+\newlength\sectionlabelwidth
+\setlength\sectionlabelwidth{0.05\linewidth}%
+
+\definecolor{light}{RGB}{160,160,160}
+\definecolor{heavy}{RGB}{0,0,0}
+
+\makeatletter
+\newcommand{\globalcolor}[1]{%
+  \color{#1}\global\let\default@color\current@color
+}
+\makeatother
+
+\AtBeginDocument{\globalcolor{heavy}}
+
+%----------------- record all section no pages ---------------
+\IfFileExists{\jobname.elsisi}{\input{\jobname.elsisi}}{}
+\newwrite\mycontents
+\immediate\openout\mycontents=\jobname.elsisi
+
+\def\addlabel{\protected@write\mycontents{}{\string\expandafter\string\def\string\csname\space section-no-\the\value{section}-end\string\endcsname{\the\value{page}}}}
+
+\def\saveddata{%
+	\protected@write\mycontents{}{\string\def\string\kingofkings{\thesection}}
+	}
+\def\myPic{}
+\titleformat{\section}
+{\Large\bfseries
+%\needspace{5\baselineskip}
+}
+{\myPic}%
+{0ex minus 0ex}
+{%
+#1}[{\titlerule[1.5pt]}]
+
+
+%\begin{tikzpicture}
+	%\path (0,0) --++(\linewidth,0) coordinate (B);
+	%\node [anchor=south west,inner xsep=0pt,inner ysep=2pt] (A) at (0,0) {#1};
+	%,xslant=0.6,transform shape
+	%\fill [overlay] ([xshift=-3pt]A.south west) --++(-42pt,0)|-([xshift=-3pt]A.north west) -- cycle;
+	%\fill [overlay] let \p1=(B),\p2=(A.south east) in (A.south east) -- ({\x1+45pt},\y2) |- (A.north east) -- cycle;
+%\end{tikzpicture}
+\newlength\SecWid
+\let\oldsection\section
+\RenewDocumentCommand{\section}{O{}m}{%
+\IfNoValueTF{#1}{\def\myPic{#1}}{\def\myPic{#1}}%
+\oldsection{#2}}
+\titlespacing*{\section}{0pt}{1ex}{0pt}
+\newif\ifmyorder
+\newcounter{myyorderu}
+
+\titleformat{\subsection}
+{\bfseries
+%\Needspace{4\baselineskip}%
+}
+{\tikz[baseline=(A.base)]{\node (A)[circle,fill,text=white,inner sep=3pt] {\arabic{subsection}}; }}%%
+{1ex minus .1ex}
+{#1
+}%
+
+\titlespacing*{\subsection}{0cm}{1ex plus 0.1ex minus 0.1ex}{1ex plus 0.3ex minus 0.3ex}
+\titlespacing*{\section}{0cm}{1ex plus 0.1ex minus 0.1ex}{1ex plus 0.1ex minus 0.1ex}
+
+\makeatother
+
+\makeatletter
+\renewcommand{\@makefnmark}{\textsuperscript{\tikz[baseline=(A.base)]{\node[inner sep=1pt,circle,fill,text=white] (A) {\bfseries\@thefnmark} ;}}}
+%\renewcommand\@makefntext[1]{%
+%{\hskip-4em%
+%\raisebox{0pt}[0ex][0pt]{%
+%\makebox[3.5em][l]{\parbox[t]{3.5em}{(\@thefnmark) $\displaystyle{\int}$}}}\hspace{0.5em}}%
+%\parindent=0em
+%\hangindent=4em
+%\hangafter=0
+%#1}
+\renewcommand\@makefntext[1]{%
+\begin{itemize}[nosep,align=left,labelwidth=1em,labelsep=0.5em,leftmargin=1.5em]
+\item[\protect{\tikz[baseline=(A.base)]{\node[inner sep=1pt,circle,fill,text=white] (A) {\bfseries\@thefnmark} ;}}] #1
+\end{itemize}%
+}
+
+\newtcolorbox{cusbox}[1][]{
+	before skip=0.0ex,
+	after skip=0.12ex,
+	enhanced,
+	left=2em,
+	lefttitle=0em,
+	right=0em,
+	coltitle=heavy,
+	top=0.5ex,
+	bottom=2pt,
+	frame hidden,
+	interior hidden,
+	title style={light!40},
+	fonttitle={\color{heavy}},
+	sharp corners,#1,
+	fontupper = \color{heavy}
+}
+
+\newtcolorbox{skillbox}[1][]{
+	before skip=0.0ex,
+	after skip=2ex,
+	enhanced,
+	left=2em,
+	lefttitle=0.3em,
+	right=0em,
+	coltitle=black,
+	top=0.5ex,
+	bottom=0.5ex,
+	frame hidden,
+	interior hidden,
+	title style={gray!30},
+	fonttitle={\color{gray!50!black}\large\bfseries},
+	sharp corners,#1,
+	breakable,
+	boxsep = 0pt,
+	boxrule = 0pt,
+	bottomtitle = 0.8ex,
+	toptitle = 0.8ex,
+	%borderline west={2pt}{0pt}{blue},
+	overlay first = {
+		\path [line width = 0.4mm,gray!30]
+				(frame.north west) -- (frame.north east);
+		\path [line width = 0.4mm,gray!30]
+				(title.south west) -- ++ (1em,0) coordinate (x1)
+				--++(0.6em,0)
+				-- (title.south east);
+		\draw [->,>=latex,line width = 0.4mm,gray!30]
+				(x1) -- (x1|-frame.south);
+	},
+	overlay last = {
+		\path [line width = 0.4mm,gray!30]
+				([xshift = 1em]frame.north west) 
+				coordinate (x1);
+		\draw [line width = 0.4mm,gray!30, <-, >=latex] (x1)
+				-- (x1|-frame.south);	
+		\draw [line width = 0.4mm,gray!30]
+				(frame.south west) -- (frame.south east);		
+	},
+	overlay middle = {
+		\path [line width = 0.4mm,gray!30]
+				([xshift = 1em]frame.north west) 
+				coordinate (x1);
+		\draw [line width = 0.4mm,gray!30, <->, >=latex] (x1)
+				-- (x1|-frame.south);		
+	},
+	overlay unbroken = {
+		\path [line width = 0.4mm,gray!30]
+				(frame.north west) -- (frame.north east);
+		\path [line width = 0.4mm,gray!30]
+				(title.south west) -- ++ (1em,0) coordinate (x1)
+				--++(0.6em,0)
+				-- (title.south east);
+		\draw [line width = 0.4mm,gray!30]
+				(x1) -- (x1|-frame.south);
+		\draw [line width = 0.4mm,gray!30]
+				(frame.south west) -- (frame.south east);
+	},
+}
+
+\newtcolorbox{detailbox}[1][]{
+	tile,
+	%frame hidden,
+	interior hidden,
+	%colupper = gray,
+	top = 0pt,
+	bottom = 0pt,
+	breakable,
+	before skip = 0.2ex,
+	left = 5px,
+	right = 0px,
+	borderline west = {0.5mm}{0mm}{gray!55!black},
+	#1,
+	%colbacktitle=columncolorheavy,
+	%colback=columncolorlight, 
+	sharp corners,
+	fonttitle={\sffamily},
+	after skip=0.5\baselineskip
+}
+
+\renewenvironment{thebibliography}[1]
+     {%
+      \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \setlength\parsep{0pt}
+            \advance\leftmargin\labelsep
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+
+\makeatother
+
+\newcommand{\varBox}[3][]{%
+	\begin{varwidth}[#1]{#2}
+		#3
+	\end{varwidth}%
+}
+
+\def\rating#1{\raisebox{-0.3ex}{\begin{tikzpicture}
+\foreach \u in {1,2,...,5}{
+\begin{scope}
+\draw (2.6*\u ex,0) coordinate (KKK) circle (1ex);
+\end{scope}}
+\pgfmathsetmacro{\scaling}{#1}
+\pgfmathsetmacro{\scalinginteger}{int(floor(\scaling))}
+\pgfmathsetmacro{\scalingres}{\scaling-\scalinginteger}
+\pgfmathsetmacro{\scalingresceil}{int(ceil(\scalingres))}
+%--------------------
+\ifnum\scalinginteger=0
+\else 
+\foreach \u in {1,...,\scalinginteger}{
+\fill (2.6*\u ex,0) circle (1ex);
+}
+\fi
+\ifnum\scalingresceil=0 \else
+\begin{scope}
+\fill ({2.6*\scalinginteger ex+2.6 ex},0) --++ (1ex,0) arc (0:360*\scalingres:1ex) -- cycle;
+\end{scope}
+\fi
+%----------------------
+\end{tikzpicture}}}
+
+\newcommand{\ratingsoft}[2]{%
+\tikz[baseline = (A.base)]{
+	\node [inner xsep = 0pt] (A) {#1};
+	\coordinate (B) at (A.base -| A.west);
+	\pgfmathsetmacro\u{int(#2*4/5)}
+	\begin{scope}[]
+	\foreach \t in {1,2,3,4}{
+		\ifthenelse{\t>\numexpr 5-\u \relax \OR \t=\numexpr 5-\u \relax}{
+		\fill 		   ([xshift = -0.4ex]B) rectangle ++ (-0.4ex,{1em*(5-\t)/4}) coordinate (B);
+		}{
+		\fill[gray!20] ([xshift = -0.4ex]B) rectangle ++ (-0.4ex,{1em*(5-\t)/4}) coordinate (B);
+		}
+		\coordinate (B) at (B |- A.base);
+	}
+	\end{scope}
+	\path (current bounding box.east) -- ++(0.8em,0);
+}}
+
+\newcommand{\inlineitem}[2][0]{%
+	\tikz[baseline = (A.base)]{
+	\colorlet{mycurrentcol}{.}%
+		\pgfmathsetmacro\calcangle{#1*360/5}
+		%\node [inner xsep = 0pt] (A) {#2};
+		\coordinate (A) at (0,0);
+		\fill [mycurrentcol!10, even odd rule,pattern=crosshatch] 
+			([xshift = -0.7em, yshift = 0.25em]A) coordinate (B) circle (0.5em)
+			(B) circle (0.25em);
+		%\coordinate (D) at ($([xshift = 0.5em]B)-(240:0.25em)$);
+		\clip ([xshift = 0.5em]B) 
+			coordinate (C) arc (0:\calcangle:0.5em) 
+			-- (B) -- cycle;
+		\fill [even odd rule,pattern=crosshatch] 
+			(B) circle (0.5em)
+			(B) circle (0.25em);
+	}\nobreak\hspace{.16667em plus .08333em}#2
+}
+
+\newcommand{\inlineitemi}[2][0]{%
+	\tikz[baseline = (A.base)]{
+	\colorlet{mycurrentcol}{.}%
+		\pgfmathsetmacro\calcangle{#1*360/5}
+		\node [inner sep = 0pt] (A) {\begin{varwidth}[t]{\linewidth - 1em}\raggedright%
+		#2%
+		\end{varwidth}
+		};
+		\fill [mycurrentcol!17, even odd rule,pattern=crosshatch] 
+			([xshift = -0.7em, yshift = 0.25em]A.base west) coordinate (B) circle (0.5em)
+			(B) circle (0.25em);
+		%\coordinate (D) at ($([xshift = 0.5em]B)-(240:0.25em)$);
+		\clip ([xshift = 0.5em]B) 
+			coordinate (C) arc (0:\calcangle:0.5em) 
+			-- (B) -- cycle;
+		\fill [even odd rule,pattern=crosshatch] 
+			(B) circle (0.5em)
+			(B) circle (0.25em);
+	}%
+}
+
+\newtcolorbox{expbox}[1][]{
+	before skip=0.0ex,
+	after skip=0.12ex,
+	enhanced,
+	left=2em,
+	lefttitle=0em,
+	right=0em,
+	coltitle=heavy,
+	top=0ex,
+	bottom=1.5mm,
+	frame hidden,
+	interior hidden,
+	title style={light!40},
+	fonttitle={\color{heavy}},
+	sharp corners,#1,
+	fontupper = \color{heavy},
+}
+
+\newcommand{\languageitem}[3][0]{%
+\noindent\tikz[baseline = (title.base)]{
+	\path (0,0) --++({\linewidth},0) coordinate (last);
+	%\draw[overlay] (0,0) --++({\linewidth},0) coordinate (last);
+	\node [anchor = base west,inner sep = 0px] (title) at (0,0) {%
+		\parbox[t]{0.6\linewidth}{\raggedright %
+			{\bfseries #2} \\
+			{\color{light} #3}
+		}
+	};
+	\node [anchor = south east, inner sep = 0px] (rate) at ([yshift = -0.5ex]last) {%
+		\rating{#1}
+	};
+
+}}

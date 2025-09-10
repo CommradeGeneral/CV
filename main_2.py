@@ -27,16 +27,24 @@ premables = premables + '''
 premables = premables + '''
         \\node [anchor = north west, inner sep = 1ex] (info0) at ([yshift = -1ex] title.south west) {
             \\varBox{\\linewidth}{\\begin{itemize}[nosep,align=left,labelwidth=\\widthof{W:},leftmargin = !,font=\\bfseries]'''
+
+
+premables = premables + '''
+                \\begin{multicols}{2}
+                '''
 try:
     premables = premables + '''
-            \\item[\\faMapMarker*] ''' + info.personal_info["Address"]
+            \\item[\\faMapMarker*] '''
+    v = 0
+    for u in info.personal_info["Address"]:
+        premables= premables + u
+        v = v + 1
+        if v < len(info.personal_info["Address"]):
+            premables = premables + ' \\par '
 except KeyError:
     pass
 
-premables = premables + '''
-                \\begin{multicols*}{2}
-                \\item[\\faMobile*] '''
-
+premables = premables + ''' \\item[\\faMobile*] '''
 y = 0
 
 for x in info.personal_info["Tel"]:
@@ -129,7 +137,7 @@ except KeyError:
     pass
 
 premables = premables + '''
-            \\end{multicols*}'''
+            \\end{multicols}'''
 
 
 premables = premables + '''
@@ -188,6 +196,9 @@ for x in info.work_experience:
             premables = premables + '\\end{expbox}\n'
             #\begin{itemize}[nosep,align = left, leftmargin = !, labelwidth = \widthof{L:}]
     except KeyError:
+        pass
+
+    
         y = x
         premables = premables + '\\begin{expbox}[title = {\\bfseries ' + y["Position"] + '}]\n'
         premables = premables + '\t {\\bfseries ' + x["Name"] + '} \n'
@@ -199,7 +210,6 @@ for x in info.work_experience:
         except KeyError:
             pass
 
-        premables = premables + '\t \\end{itemize}\n'
         try:
             temp = y["Position_Det"]
             premables = premables + '\t \\end{itemize}\n'
@@ -348,7 +358,14 @@ premables = premables + '''
 premables = premables + '\\begin{itemize}[nosep,align = left, leftmargin = !, labelwidth = \\widthof{L:}]\\raggedright\n'
 try:
     premables = premables + '''
-            \\item[\\faMapMarker*] ''' + info.personal_info["Address"]
+            \\item[\\faMapMarker*] '''
+    v = 0
+    for u in info.personal_info["Address"]:
+        premables= premables + u
+        v = v + 1
+        if v < len(info.personal_info["Address"]):
+            premables = premables + ' \\par '
+            
 except KeyError:
     pass
 

@@ -128,7 +128,7 @@ PLC_Delta = {
 
 Relaying_cont = {
     "Level"     : [5],
-    "Name"      : "Relaying Control",
+    "Name"      : "Relay Logic Control (Classic Control)",
     #"Details"   : "Including Siemens S7-1200 series and S7-300 \\& S7-400 + Delta's DVP series + Vigor"
     }
 

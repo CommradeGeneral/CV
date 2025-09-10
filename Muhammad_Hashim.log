@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.21.0 (MiKTeX 25.3) (format=lualatex 2025.4.10)  24 AUG 2025 17:18
+This is LuaHBTeX, Version 1.21.0 (MiKTeX 25.3) (format=lualatex 2025.4.10)  11 SEP 2025 01:07
  system commands enabled.
 **Muhammad_Hashim.tex rm Muhammad_Hashim.aux Muhammad_Hashim.log Muhammad_Hashi
 m-inc.eps Muhammad_Hashim.tex Muhammad_Hashimconverted-to.pdf
@@ -1781,12 +1781,11 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 28.
 
 (D:/Programs/MiKTeX/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-
-[1
+) [1
 
 {C:/Users/mhash/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-(./Muhammad_Hashim.aux)
+
+[2] (./Muhammad_Hashim.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1795,21 +1794,22 @@ L3 programming layer <2025-01-18>
 
 Here is how much of LuaTeX's memory you used:
  43324 strings out of 475506
- 156265,1977958 words of node,token memory allocated
- 1693 words of node memory still in use:
-   30 hlist, 2 vlist, 14 rule, 4 glue, 4 kern, 1 glyph, 81 attribute, 132 glue_s
-pec, 81 attribute_list, 2 write, 24 pdf_literal, 24 pdf_colorstack nodes
-   avail lists: 2:9787,3:6287,4:520,5:216,6:214,7:10780,8:2,9:2098,10:12,11:712
+ 195330,1977958 words of node,token memory allocated
+ 1825 words of node memory still in use:
+   30 hlist, 2 vlist, 14 rule, 16 glue, 4 kern, 1 glyph, 93 attribute, 132 glue_
+spec, 93 attribute_list, 2 write, 24 pdf_literal, 24 pdf_colorstack nodes
+   avail lists: 1:1,2:10215,3:6331,4:556,5:218,6:232,7:13271,8:2,9:2129,10:11,11
+:963
  64930 multiletter control sequences out of 65536+600000
  57 fonts using 20556583 bytes
- 121i,9n,117p,1155b,1568s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 121i,9n,117p,1155b,1570s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Windows/Fonts/segmdl2.ttf><D:/Programs/MiKTeX/fonts/opentype/public/fontawes
 ome5/FontAwesome5Brands-Regular-400.otf><C:/Windows/Fonts/arial.ttf><D:/Programs
 /MiKTeX/fonts/opentype/public/fontawesome5/FontAwesome5Free-Solid-900.otf><C:/Wi
 ndows/Fonts/arialbd.ttf>
-Output written on Muhammad_Hashim.pdf (1 page, 100558 bytes).
+Output written on Muhammad_Hashim.pdf (2 pages, 102588 bytes).
 
-PDF statistics: 82 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 85 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  256 words of extra memory for PDF output out of 10000 (max. 100000000)
 

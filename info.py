@@ -1,11 +1,11 @@
 
 personal_info = {
     "Name"          : "Muhammad Hashim",
-    "Title"         : "Electrical Engineer",
+    "Title"         : "Senior Electrical Engineer",
     "Tel"           : ["01008424732","01559544732"],
     "Whatsapp"      : ["01008424732"],
     "Telegram"      : ["01008424732"],
-    "Address"       : "Mit Ghamr - Dakahliyya",
+    "Address"       : ["Cairo","Mit Ghamr - Dakahliyya"],
     "Email"         : ["m.hashim.666666@gmail.com"],
     "LinkedIn"      : ["linkedin.com/in/muhammad-hashim-04ab56197/"],
     "Github"        : ["https://github.com/CommradeGeneral"],
@@ -47,6 +47,7 @@ eggecc_position_1 = {
     "Position"      : "Testing \\& Commissioning Engineer",
     "Position_Det"  : '''   \\item Supported installation and commissioning of elevator systems for 4000+ units of same Fuji product.
                             \\item Provided technical assistance and troubleshooting during installation.
+                            \\item Collaborate with engineering and project management to ensure compliance with quality and safety standards.
                             \\item Ensured installations followed design guidelines and industry standards.
                             \\item Reviewed user manuals and circuit diagrams for installation accuracy.
                         ''',
@@ -59,11 +60,19 @@ eggecc_position_2 = {
     }
 eggecc_position_3 = {
     "Position"      : "Maintenance Engineer",
-    "Position_Det"  : '''\\item Conduct scheduled and preventive maintenance for various elevator systems.
-                            \\item Replace damaged or expired components to ensure operational safety.
+    "Position_Det"  : '''   \\item Conduct scheduled and preventive and predictive maintenance for various elevator systems to maximize
+                                    reliability and extend product life.
+                            \\item Replace damaged or expired components to ensure operational safety, and
+                                    recommend upgrades if possible.
+                            \\item Manage spare parts inventory and ensure cost-effective procurement of tools and equipment.
+                            \\item Collaborate with engineering and project management to ensure compliance with quality and safety standards.
                             \\item Inspect, troubleshoot, and resolve mechanical and electrical faults.
-                            \\item Supervise a team of technicians and ensure work quality and safety compliance.
-                            \\item Review electrical schematics and document maintenance activities.''',
+                            \\item Supervise and train maintenance teams, providing technical guidance and performance feedback.
+                            \\item Ensure adherence to health, safety, and environmental regulations in all maintenance activities.
+                            \\item Review electrical schematics and document maintenance activisties.
+                            \\item Prepare technical reports, budgets, and maintenance documentation for managements review.
+                            ''',
+                            
     "Duration"      : ["1/12/2023" , "Present"]
     }
 eggeec = {
@@ -82,7 +91,15 @@ Al_sheriff = {
     "Name"         : "Ash-Sherif for melamine",
     "Duration"     : ["20/1/2021", "30/7/2021"],
     "Headquarter"     : "Al-Khanka",
-    "Position"     : "Junior Maintenance Engineer",
+    "Position"     : "Entry Level Maintenance Engineer",
+    "Position_Det"  : '''   \\item Conduct scheduled and preventive and predictive maintenance for various machines to maximize
+                                    reliability and extend product life.
+                            \\item Replace damaged or expired components to ensure operational safety, and
+                                    recommend upgrades if possible.
+                            \\item Manage spare parts inventory and ensure cost-effective procurement of tools and equipment.
+                            \\item Inspect, troubleshoot, and resolve mechanical and electrical faults.
+                            \\item Review electrical schematics and document maintenance activisties.
+                            '''
     }
 
 
@@ -113,14 +130,15 @@ courses = [PLC_advanced,PLC_basic]
 
 my_objective_2 = '''
 Electrical Engineer specialized in Electrical installation, maintenance and troubleshooting of
-various elevator systems, with 3 years of overall experience in all of them, as well as
+various elevator systems, with 4 years of overall experience in all of them, as well as
 designing/panel building of elevator control systems, seek to using my
 technical skills in this field as well as endless improvement of it, by joining a friendly and a
 growth tolerent work environment.
 '''
 my_objective = '''
-Electrical Engineer with over 3 years of experience in elevator systems maintenance,
-commissioning, and control panel design for elevator systems. Proficient in troubleshooting electrical faults for various elevator systems, PLC programming,
+Electrical Engineer with over 4 years of experience in elevator systems maintenance,
+commissioning, and control panel design for elevator systems. Proficient in troubleshooting electrical faults for various elevator systems.
+In addition to designing and troubleshooting Industrial automation systems, including PLC programming,
 and motor drive systems. Seeking to contribute technical expertise and continuous improvement mindset in a
 dynamic engineering environment.
 '''

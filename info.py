@@ -60,7 +60,7 @@ eggecc_position_2 = {
     }
 eggecc_position_3 = {
     "Position"      : "Maintenance Engineer",
-    "Position_Det"  : '''   \\item Conduct scheduled and preventive and predictive maintenance for various elevator systems to maximize
+    "Position_Det"  : '''   \\item Conduct scheduled and preventive maintenance for various elevator systems to maximize
                                     reliability and extend product life.
                             \\item Replace damaged or expired components to ensure operational safety, and
                                     recommend upgrades if possible.
@@ -68,7 +68,6 @@ eggecc_position_3 = {
                             \\item Collaborate with engineering and project management to ensure compliance with quality and safety standards.
                             \\item Inspect, troubleshoot, and resolve mechanical and electrical faults.
                             \\item Supervise and train maintenance teams, providing technical guidance and performance feedback.
-                            \\item Ensure adherence to health, safety, and environmental regulations in all maintenance activities.
                             \\item Review electrical schematics and document maintenance activisties.
                             \\item Prepare technical reports, budgets, and maintenance documentation for managements review.
                             ''',

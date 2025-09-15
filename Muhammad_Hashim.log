@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.21.0 (MiKTeX 25.3) (format=lualatex 2025.4.10)  11 SEP 2025 01:07
+This is LuaHBTeX, Version 1.21.0 (MiKTeX 25.3) (format=lualatex 2025.4.10)  16 SEP 2025 02:47
  system commands enabled.
 **Muhammad_Hashim.tex rm Muhammad_Hashim.aux Muhammad_Hashim.log Muhammad_Hashi
 m-inc.eps Muhammad_Hashim.tex Muhammad_Hashimconverted-to.pdf
@@ -1794,12 +1794,12 @@ L3 programming layer <2025-01-18>
 
 Here is how much of LuaTeX's memory you used:
  43324 strings out of 475506
- 195330,1977958 words of node,token memory allocated
+ 195327,1977958 words of node,token memory allocated
  1825 words of node memory still in use:
    30 hlist, 2 vlist, 14 rule, 16 glue, 4 kern, 1 glyph, 93 attribute, 132 glue_
 spec, 93 attribute_list, 2 write, 24 pdf_literal, 24 pdf_colorstack nodes
-   avail lists: 1:1,2:10215,3:6331,4:556,5:218,6:232,7:13271,8:2,9:2129,10:11,11
-:963
+   avail lists: 1:1,2:10200,3:6327,4:556,5:218,6:232,7:13201,8:2,9:2126,10:11,11
+:950
  64930 multiletter control sequences out of 65536+600000
  57 fonts using 20556583 bytes
  121i,9n,117p,1155b,1570s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1807,7 +1807,7 @@ spec, 93 attribute_list, 2 write, 24 pdf_literal, 24 pdf_colorstack nodes
 ome5/FontAwesome5Brands-Regular-400.otf><C:/Windows/Fonts/arial.ttf><D:/Programs
 /MiKTeX/fonts/opentype/public/fontawesome5/FontAwesome5Free-Solid-900.otf><C:/Wi
 ndows/Fonts/arialbd.ttf>
-Output written on Muhammad_Hashim.pdf (2 pages, 102588 bytes).
+Output written on Muhammad_Hashim.pdf (2 pages, 102358 bytes).
 
 PDF statistics: 85 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)

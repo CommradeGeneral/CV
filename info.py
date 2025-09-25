@@ -111,7 +111,7 @@ PLC_basic = {
     }
 
 PLC_advanced = {
-    "Duration"          : ["5/4/2025","Ongoing"],
+    "Duration"          : ["5/4/2025","23/9/2025"],
     "Name"              : "Industrial Automation (PLC advanced)",
     "Training Center"   : "HA Consulting Center",
     "Location"          : "Al-Abbasiyya/Cairo",

@@ -5,7 +5,7 @@ personal_info = {
     "Tel"           : ["01008424732","01559544732"],
     "Whatsapp"      : ["01008424732"],
     "Telegram"      : ["01008424732"],
-    "Address"       : ["Cairo","Mit Ghamr - Dakahliyya"],
+    "Address"       : ["Mit Ghamr - Dakahliyya"],
     "Email"         : ["m.hashim.666666@gmail.com"],
     "LinkedIn"      : ["linkedin.com/in/muhammad-hashim-04ab56197/"],
     "Github"        : ["https://github.com/CommradeGeneral"],
@@ -105,7 +105,7 @@ Al_sheriff = {
 PLC_basic = {
     "Duration"          : ["21/5/2021","15/8/2021"],
     "Name"              : "Industrial Automation (Classic control + PLC Basic Diploma)",
-    "Training Center"   : "HA Consulting Center",
+    "Training Center"   : "HA Consulting Group",
     "Location"          : "Al-Abbasiyya/Cairo",
     "Tracks"            : ["Classic Control","PLC (basic)","VVVF Motor Drives"]
     }
@@ -113,7 +113,7 @@ PLC_basic = {
 PLC_advanced = {
     "Duration"          : ["5/4/2025","23/9/2025"],
     "Name"              : "Industrial Automation (PLC advanced)",
-    "Training Center"   : "HA Consulting Center",
+    "Training Center"   : "HA Consulting Group",
     "Location"          : "Al-Abbasiyya/Cairo",
     "Tracks"            : ["PLC Advanced","Industrial Communication", "SCADA/HMI"]
     }
